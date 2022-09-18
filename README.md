@@ -54,6 +54,12 @@ This will install:
 
 ### Editor
 
+The helix editor needs some configuration to support as much languages as possible. Simply run:
+
+```fish
+hx -g fetch && hx -g build
+```
+
 ### Rust
 
 ### Python
