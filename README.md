@@ -24,6 +24,11 @@ Afterwards, install the Helix editor, the Fish shell, and the Alacritty terminal
 brew install helix fish alacritty
 ```
 
+Install all the nice utilities in the background:
+```bash
+brew install dust eva fd hexyl jless fzf just nomino pueue ripgrep sd starship tealdeer tokei zoxide
+```
+
 Finally, in a Fish shell, install Fisher for managing fish plugins:
 
 ```bash
@@ -54,3 +59,5 @@ This will install:
 ### Python
 
 ### Node
+
+### LaTeX
