@@ -32,7 +32,8 @@ should be [Homebrew](https://brew.sh/):
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Afterwards, install the Helix editor, the Fish shell, the Alacritty terminal,
+Afterwards, install the [Helix](https://helix-editor.com) editor, the [Fish]
+(https://fishshell.com) shell, the [Alacritty](https://alacritty.org) terminal,
 and the Rectangle window manager:
 
 ```bash
