@@ -2,13 +2,13 @@
 
 ## Philosophy
 
-Personalized Development Environment (PDE) is a concept borrowed from a [talk]
-(https://www.youtube.com/watch?v=IK_-C0GXfjo) given by TJ DeVries. He used the
-term to refer to editors (such as Vim and NeoVim) that are more than just text
-editors. However, I would say a good editor is just the core of a comfortable
-development environment, just as Linux is the core of the operating system
-distribution. A personalized development environment should also include the
-whole ecosystem.
+Personalized Development Environment (PDE) is a concept borrowed from a
+[talk](https://www.youtube.com/watch?v=IK_-C0GXfjo) given by TJ DeVries. He
+used the term to refer to editors (such as Vim and NeoVim) that are more than
+just text editors. However, I would say a good editor is just the core of a
+comfortable development environment, just as Linux is the core of the operating
+system distribution. A personalized development environment should also include
+the whole ecosystem.
 
 Configuring and reproducing a PDE is hard. When I have to migrate from one
 computer to another, it has always been hard for me to remember all the
