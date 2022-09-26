@@ -1,5 +1,5 @@
 # git
-abbr -ag ga git add
+abbr -a -g -- ga git add
 
 # misc
-abbr -ag p proxy
+abbr -a -g -- p proxy
