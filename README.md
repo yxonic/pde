@@ -83,6 +83,15 @@ hx -g fetch && hx -g build
 
 ### Python
 
+Python development is best done in virtual environments. Some of my favorite
+virtual environment management tools are: `virtualenv`, `virtualfish`, `conda`.
+To enable best development experience, install following tools **inside** the
+virtual environment for helix to pick up:
+
+```fish
+pip install python-lsp-server python-lsp-black
+```
+
 ### Node
 
 ### LaTeX
