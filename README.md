@@ -104,8 +104,8 @@ curl -sSL https://install.python-poetry.org | python3 -
 For scientific research, I would install `miniconda`, since it provides many
 ready-to-use scientific packages and dependencies.
 
-To enable best editing experience, install following tools inside** the virtual
-**environment for helix to pick up:
+To enable best editing experience, install following tools **inside** the
+virtual environment for helix to pick up:
 
 ```fish
 pip install python-lsp-server python-lsp-black
