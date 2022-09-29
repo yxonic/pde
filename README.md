@@ -81,12 +81,31 @@ hx -g fetch && hx -g build
 
 ### Rust
 
+Install `rustup` to manage Rust toolchain with ease:
+
+```fish
+brew install rustup
+```
+
 ### Python
 
 Python development is best done in virtual environments. Some of my favorite
-virtual environment management tools are: `virtualenv`, `virtualfish`, `conda`.
-To enable best development experience, install following tools **inside** the
-virtual environment for helix to pick up:
+virtual environment management tools are `virtualfish` and `conda`.
+
+For python package development, I would use `virtualfish` or `poetry`. They are
+both installed with system python:
+
+```fish
+brew install python
+pip3 install virtualfish
+curl -sSL https://install.python-poetry.org | python3 -
+```
+
+For scientific research, I would install `miniconda`, since it provides many
+ready-to-use scientific packages and dependencies.
+
+To enable best editing experience, install following tools inside** the virtual
+**environment for helix to pick up:
 
 ```fish
 pip install python-lsp-server python-lsp-black
@@ -95,3 +114,9 @@ pip install python-lsp-server python-lsp-black
 ### Node
 
 ### LaTeX
+
+To install LaTeX environment:
+
+```fish
+brew install mactex
+```
