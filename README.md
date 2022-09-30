@@ -116,7 +116,7 @@ pip install python-lsp-server python-lsp-black
 I like to manage node versions with `nvm.fish`:
 
 ```fish
-set -Ux nvm_default_version lts
+set -U nvm_default_version lts
 fisher install jorgebucaran/nvm.fish
 nvm install lts
 ```
