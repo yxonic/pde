@@ -117,6 +117,7 @@ I like to manage node versions with `nvm.fish`:
 
 ```fish
 set -U nvm_default_version lts
+set -U nvm_default_packages pnpm
 fisher install jorgebucaran/nvm.fish
 nvm install lts
 ```
