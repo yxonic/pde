@@ -118,6 +118,7 @@ I like to manage node versions with `nvm.fish`:
 ```fish
 set -Ux nvm_default_version lts
 fisher install jorgebucaran/nvm.fish
+nvm install lts
 ```
 
 ### LaTeX
