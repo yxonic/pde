@@ -43,7 +43,7 @@ brew install helix fish alacritty rectangle
 Install all the nice utilities in the background:
 
 ```bash
-brew install dust eva fd fzf hexyl jless just mdbook nomino pueue ripgrep sd starship tealdeer tokei zoxide
+brew install croc dust eva fd fzf hexyl jless just mdbook nomino pueue ripgrep sd starship tealdeer tokei zoxide
 ```
 
 Finally, in a Fish shell, install Fisher for managing fish plugins:
@@ -92,17 +92,18 @@ brew install rustup
 Python development is best done in virtual environments. Some of my favorite
 virtual environment management tools are `virtualfish` and `conda`.
 
-For python package development, I would use `virtualfish` or `poetry`. They are
-both installed with system python:
+For python package development, I would use `virtualfish` with `poetry`. They
+are both installed with system python:
 
 ```fish
 brew install python
 pip3 install virtualfish
+vf addplugins auto_activation
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
 For scientific research, I would install `miniconda`, since it provides many
-ready-to-use scientific packages and dependencies.
+ready-to-use scientific packages and libraries.
 
 To enable best editing experience, install following tools **inside** the
 virtual environment for helix to pick up:
