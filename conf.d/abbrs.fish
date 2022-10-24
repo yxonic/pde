@@ -8,6 +8,7 @@ abbr -a -g -- gp git push
 abbr -a -g -- gl git pull
 abbr -a -g -- gd git diff
 abbr -a -g -- gdc git diff --cached
+abbr -a -g -- glog git log --graph --pretty=oneline
 
 # misc
 abbr -a -g -- p proxy
