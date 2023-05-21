@@ -43,7 +43,7 @@ brew install helix fish alacritty rectangle
 Install all the nice utilities in the background:
 
 ```bash
-brew install croc dua-cli dust eva fd fzf hexyl jless just mdbook nomino pueue ripgrep sd starship tealdeer tokei zoxide
+brew install croc dua-cli dust eva fd fzf hexyl jless just mdbook nomino pastel pueue ripgrep sd starship tealdeer tokei zoxide
 ```
 
 Finally, in a Fish shell, install Fisher for managing fish plugins:
@@ -109,7 +109,7 @@ To enable best editing experience, install following tools **inside** the
 virtual environment for helix to pick up:
 
 ```fish
-pip install python-lsp-server python-lsp-black
+pip install python-lsp-server python-lsp-black python-lsp-ruff
 ```
 
 ### Node
