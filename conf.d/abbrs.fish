@@ -10,5 +10,8 @@ abbr -a -g -- gd git diff
 abbr -a -g -- gdc git diff --cached
 abbr -a -g -- glog git log --graph --pretty=oneline
 
+# python
+abbr -a -g -- activate 'source $(poetry env info --path)/bin/activate.fish'
+
 # misc
 abbr -a -g -- p proxy
