@@ -33,11 +33,11 @@ should be [Homebrew](https://brew.sh/):
 ```
 
 Afterwards, install the [Helix](https://helix-editor.com) editor, the
-[Fish](https://fishshell.com) shell, the [Alacritty](https://alacritty.org)
+[Fish](https://fishshell.com) shell, the [Ghostty](https://ghostty.org)
 terminal, and the Rectangle window manager:
 
 ```bash
-brew install helix fish alacritty rectangle
+brew install helix fish ghostty rectangle
 ```
 
 Install all the nice utilities in the background:
@@ -89,39 +89,15 @@ brew install rustup
 
 ### Python
 
-Python development is best done in virtual environments. Some of my favorite
-virtual environment management tools are `virtualfish` and `conda`.
+Normal Python development can be handled by [`uv`](https://github.com/astral-sh/uv).
+It is a Python package and project manager written in Rust.
 
-For python package development, I would use `virtualfish` with `poetry`. They
-are both installed with system python:
-
-```fish
-brew install python
-pip3 install virtualfish
-vf addplugins auto_activation
-curl -sSL https://install.python-poetry.org | python3 -
-```
-
-For scientific research, I would install `miniconda`, since it provides many
-ready-to-use scientific packages and libraries.
-
-To enable best editing experience, install following tools **inside** the
-virtual environment for helix to pick up:
-
-```fish
-pip install python-lsp-server python-lsp-black python-lsp-ruff
-```
+For scientific research, I would install [`miniforge`](https://github.com/conda-forge/miniforge),
+since it provides many ready-to-use scientific packages and libraries.
 
 ### Node
 
-I like to manage node versions with `nvm.fish`:
-
-```fish
-set -U nvm_default_version lts
-set -U nvm_default_packages pnpm
-fisher install jorgebucaran/nvm.fish
-nvm install lts
-```
+I like to manage node versions and packages with [`pnpm`](https://pnpm.io).
 
 ### LaTeX
 
