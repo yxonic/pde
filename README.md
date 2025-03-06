@@ -34,10 +34,11 @@ should be [Homebrew](https://brew.sh/):
 
 Afterwards, install the [Helix](https://helix-editor.com) editor, the
 [Fish](https://fishshell.com) shell, the [Ghostty](https://ghostty.org)
-terminal, and the Rectangle window manager:
+terminal, [raycast](https://www.raycast.com), and the Rectangle window
+manager:
 
 ```bash
-brew install helix fish ghostty rectangle
+brew install helix fish ghostty raycast rectangle
 ```
 
 Install all the nice utilities in the background:
