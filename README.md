@@ -65,19 +65,13 @@ set -a list zoxide      # shell extension for fs navigation
 brew install $list
 ```
 
-Finally, in a Fish shell, install Fisher for managing fish plugins:
-
-```bash
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-```
-
 ## Configuration
 
 Note that all the configurations are wrapped as a custom fish plugin within
 this repo. Install all of them with Fisher:
 
 ```bash
-fisher install yxonic/pde
+curl -fsSL https://raw.githubusercontent.com/yxonic/pde/main/install.fish | fish
 ```
 
 This will install:
