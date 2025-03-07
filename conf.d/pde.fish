@@ -1,5 +1,18 @@
+if test -e $source
+    set -g _pde_source $source
+end
+
 function migrate_config
-    rsync -au --backup --suffix=$(date +'.%F_%H-%M') etc/ $HOME/.config
+    if test -e $_pde_source
+        rsync -au --backup --suffix=".bak" "$_pde_source/etc/" "$HOME/.config"
+    end
+
+    if ! grep init_shell "$__fish_config_dir/config.fish" >/dev/null
+        set --local _fish_config "$__fish_config_dir/config.fish"
+        mv $_fish_config "$_fish_config.bak"
+        printf "init_shell\n" >$_fish_config
+        cat "$_fish_config.bak" >>$_fish_config
+    end
 end
 
 function _pde_install --on-event pde_install

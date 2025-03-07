@@ -87,15 +87,6 @@ This will install:
 - My favorite shell aliases.
 - Configuration files for other tools such as `hx`.
 
-Remember to add `init_shell` after homebrew initialization in `.config/fish/config.fish`:
-
-```bash
-eval $(/opt/homebrew/bin/brew shellenv)
-init_shell
-
-# other configurations...
-```
-
 ## Language environment
 
 ### Editor
@@ -120,9 +111,22 @@ micromamba shell init --shell fish --root-prefix=~/.local/share/mamba
 micromamba config set auto_activate_base true
 ```
 
+Install useful packages:
+```bash
+mamba install ipython notebook numpy scipy pandas polars matplotlib
+```
+
 ### Node
 
-Manage node versions and projects with [`pnpm`](https://pnpm.io).
+Manage node versions and projects with [`pnpm`](https://pnpm.io):
+```bash
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
+
+In a new shell, use pnpm to install node lts version:
+```bash
+pnpm env use --global lts
+```
 
 ### Rust
 
@@ -130,6 +134,7 @@ Install `rustup` to manage Rust toolchain with ease:
 
 ```bash
 brew install rustup
+rustup default stable
 ```
 
 ### LaTeX
