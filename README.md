@@ -10,12 +10,6 @@ comfortable development environment, just as Linux is the core of the operating
 system distribution. A personalized development environment should also include
 the whole ecosystem.
 
-Configuring and reproducing a PDE is hard. When I have to migrate from one
-computer to another, it has always been hard for me to remember all the
-toolings that I use, let alone restoring all the configurations I made. Instead
-of trying to write down every step I take, I decide to manage the **process**
-with code as much as possible.
-
 This project maintains the instructions, toolings and configurations needed to
 quickly reproduce a PDE on any machine. It is just for myself and my workflow,
 but if you are reading this, hope you could also learn something here.
@@ -33,36 +27,35 @@ should be [Homebrew](https://brew.sh/):
 ```
 
 Afterwards, install the [Helix](https://helix-editor.com) editor, the
-[Fish](https://fishshell.com) shell, the [Ghostty](https://ghostty.org)
-terminal, [raycast](https://www.raycast.com), and the [Rectangle](https://rectangleapp.com/)
-window manager:
+[Fish](https://fishshell.com) shell, and some essential utilities:
 
 ```bash
-brew install helix fish ghostty raycast rectangle
+brew install helix fish starship zoxide
 ```
 
-Install all the nice utilities in the background:
+Install all the other nice tools in the background:
 
 ```bash
-set -e list
-set -a list croc        # transfer stuff from one computer to another
-set -a list dua-cli     # view disk space usage and delete unwanted data
-set -a list dust        # more intuitive version of du
-set -a list eva         # calculator
-set -a list fd          # simple, fast and user-friendly alternative to find
-set -a list fzf         # fuzzy finder
-set -a list hexyl       # hex viewer
-set -a list jless       # json pager
-set -a list jq          # json processor
-set -a list nomino      # batch rename utility
-set -a list pastel      # generate, analyze, convert and manipulate colors
-set -a list ripgrep     # grep alternative
-set -a list sd          # sed alternative
-set -a list starship    # cross-shell prompt
-set -a list tealdeer    # tldr
-set -a list tokei       # code count
-set -a list zoxide      # shell extension for fs navigation
-brew install $list
+set -e _list
+set -a _list croc        # transfer stuff from one computer to another
+set -a _list dua-cli     # view disk space usage and delete unwanted data
+set -a _list dust        # more intuitive version of du
+set -a _list eva         # calculator
+set -a _list fd          # simple, fast and user-friendly alternative to find
+set -a _list fzf         # fuzzy finder
+set -a _list ghostty     # terminal emulator
+set -a _list hexyl       # hex viewer
+set -a _list jless       # json pager
+set -a _list jq          # json processor
+set -a _list nomino      # batch rename utility
+set -a _list pastel      # generate, analyze, convert and manipulate colors
+set -a _list raycast     # spotlight/alfred alternative
+set -a _list rectangle   # window manager
+set -a _list ripgrep     # grep alternative
+set -a _list sd          # sed alternative
+set -a _list tealdeer    # display simple help page for commands
+set -a _list tokei       # code count
+brew install $_list
 ```
 
 ## Configuration
