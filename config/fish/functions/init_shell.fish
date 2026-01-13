@@ -8,5 +8,8 @@ function init_shell --description "Initialize shell. Should be called in config.
         fzf --fish | source
 
         set -gx EDITOR (which hx)
+
+        set -gx BUN_INSTALL "$HOME/.bun"
+        fish_add_path -g "$BUN_INSTALL/bin"
     end
 end

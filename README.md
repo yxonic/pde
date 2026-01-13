@@ -105,14 +105,12 @@ mamba install ipython notebook numpy scipy pandas polars matplotlib
 
 ### Node
 
-Manage node versions and projects with [`pnpm`](https://pnpm.io):
-```bash
-curl -fsSL https://get.pnpm.io/install.sh | sh -
-```
+It is now possible to use [bun](https://bun.sh/) for all node.js use cases.
 
-In a new shell, use pnpm to install node lts version:
+To Install:
+
 ```bash
-pnpm env use --global lts
+curl -fsSL https://bun.sh/install | bash
 ```
 
 ### Rust
