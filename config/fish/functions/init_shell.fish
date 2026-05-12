@@ -5,7 +5,7 @@ function init_shell --description "Initialize shell. Should be called in config.
         functions -e __fish_prompt_orig
 
         zoxide init fish | source
-        fzf --fish | source
+        # fzf --fish | source
 
         set -gx EDITOR (which hx)
 

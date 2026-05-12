@@ -1,1 +1,2 @@
 command = /usr/local/bin/fish
+macos-option-as-alt = left

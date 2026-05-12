@@ -42,12 +42,10 @@ set -a _list dua-cli     # view disk space usage and delete unwanted data
 set -a _list dust        # more intuitive version of du
 set -a _list eva         # calculator
 set -a _list fd          # simple, fast and user-friendly alternative to find
-set -a _list fzf         # fuzzy finder
 set -a _list ghostty     # terminal emulator
 set -a _list hexyl       # hex viewer
 set -a _list jless       # json pager
 set -a _list jq          # json processor
-set -a _list nomino      # batch rename utility
 set -a _list pastel      # generate, analyze, convert and manipulate colors
 set -a _list raycast     # spotlight/alfred alternative
 set -a _list rectangle   # window manager
