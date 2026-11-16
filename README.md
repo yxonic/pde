@@ -20,46 +20,61 @@ but if you are reading this, hope you could also learn something here.
 
 On having a new machine, the first thing to do is to install a package manager.
 This enables easy installation for all the following utilities. For macOS, this
-should be [Homebrew](https://brew.sh/):
+should be [MacPorts](https://www.macports.org/), which still supports Intel
+Macs. Install Xcode Command Line Tools first, then the MacPorts package for
+your macOS version from the [installation page](https://www.macports.org/install.php):
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+xcode-select --install
 ```
 
 Afterwards, install the [Helix](https://helix-editor.com) editor, the
 [Fish](https://fishshell.com) shell, and some essential utilities:
 
 ```bash
-brew install helix fish starship zoxide
+sudo port install helix fish starship zoxide
+```
+
+Make fish the login shell, so that terminals and editors all pick it up:
+
+```bash
+echo /opt/local/bin/fish | sudo tee -a /etc/shells
+chsh -s /opt/local/bin/fish
 ```
 
 Install all the other nice tools in the background:
 
 ```bash
 set -e _list
-set -a _list croc        # transfer stuff from one computer to another
-set -a _list dua-cli     # view disk space usage and delete unwanted data
-set -a _list dust        # more intuitive version of du
-set -a _list eva         # calculator
-set -a _list fd          # simple, fast and user-friendly alternative to find
-set -a _list ghostty     # terminal emulator
-set -a _list hexyl       # hex viewer
-set -a _list jless       # json pager
-set -a _list jq          # json processor
-set -a _list pastel      # generate, analyze, convert and manipulate colors
-set -a _list raycast     # spotlight/alfred alternative
-set -a _list rectangle   # window manager
 set -a _list ripgrep     # grep alternative
-set -a _list sd          # sed alternative
-set -a _list tealdeer    # display simple help page for commands
+set -a _list fd          # simple, fast and user-friendly alternative to find
+set -a _list gh          # github cli
+set -a _list jq          # json processor
+set -a _list jless       # json pager
+set -a _list dust        # more intuitive version of du
 set -a _list tokei       # code count
-brew install $_list
+set -a _list yt-dlp      # video downloader
+set -a _list ffmpeg      # audio/video converter
+sudo port install $_list
 ```
+
+MacPorts does not ship GUI apps. Download these from their websites:
+
+- [Ghostty](https://ghostty.org): terminal emulator
+- [Cursor](https://cursor.com): editor
+- [Google Chrome](https://www.google.com/chrome/): browser
+- [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev): proxy
+- [Rectangle](https://rectangleapp.com): window manager
+- Tinycast: spotlight/alfred alternative
+- [Keka](https://www.keka.io): archiver
+- [iStat Menus](https://bjango.com/mac/istatmenus/): system monitor
+- OpenLogi: Logitech device driver
+- [WeChat](https://mac.weixin.qq.com), [Tencent Meeting](https://meeting.tencent.com), [Telegram](https://telegram.org): communication
 
 ## Configuration
 
 Note that all the configurations are wrapped as a custom fish plugin within
-this repo. Install all of them with Fisher:
+this repo. Install all of them with:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/yxonic/pde/main/install.fish | fish
@@ -91,7 +106,7 @@ It is a Python package and project manager written in Rust.
 For scientific research, install [`micromamba`](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html)
 as a conda alternative:
 ```bash
-brew install micromamba
+sudo port install micromamba
 micromamba shell init --shell fish --root-prefix=~/.local/share/mamba
 micromamba config set auto_activate_base true
 ```
@@ -116,14 +131,15 @@ curl -fsSL https://bun.sh/install | bash
 Install `rustup` to manage Rust toolchain with ease:
 
 ```bash
-brew install rustup
+sudo port install rustup
 rustup default stable
 ```
 
 ### LaTeX
 
-To install LaTeX environment:
+To install LaTeX environment, download [MacTeX](https://www.tug.org/mactex/),
+or install TeX Live from MacPorts:
 
 ```bash
-brew install mactex
+sudo port install texlive
 ```
